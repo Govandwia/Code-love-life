@@ -1,0 +1,252 @@
+<!-- Membuat mirip gform -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas PW pertemuan 4</title>
+    <style>
+        /* import font from local file */
+        @font-face {
+            font-family: 'Open-sans';
+            src: url(font/OpenSans-Regular.ttf);
+        }
+
+        body{
+            background-color: rgb(237,227,225);
+            color: black;
+            font-family: Open-sans;
+        }
+
+        /* pembungkus semua nya */
+        .main {
+            width: 600px;
+            height: 1200px;
+            margin: 0px auto;
+        }
+
+        /* general use */
+        .header-form {
+            font-size: 20px;
+        }
+
+        /* bagian awal */
+        .header{
+            width: auto;
+            height: 200px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        /* Judul + gambar */
+        .header-header {
+            background-image: url(img_tugas/1.jpg);
+            background-size: cover;
+            height: 50%;
+            color: white;
+        }
+
+        /* mengatur judul */
+        .header-header h1 {
+            position: relative;
+            top: 50px;
+        }
+
+        .main .header .top-header {
+            width: auto;
+            height: 10px;
+            background-color: blueviolet;
+            border-radius: 5px 5px 0 0;
+        }
+
+
+        .text-mini {
+            font-size: 10px;
+        }
+
+        .main .header .text-mini {
+            display: inline;
+        }
+
+        .main .header .crossed-eye {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        /* nama */
+        .nama {
+            margin-top: 15px;
+            width: auto;
+            height: 125px;
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px 15px 10px 20px;
+        }
+
+        .form-nama {
+            margin-top: 20px;
+            width: 400px;
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: lightgray;
+        }
+
+        /* email */
+        .email {
+            margin-top: 15px;
+            width: auto;
+            height: 125px;
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px 15px 10px 20px;
+        }
+
+        .form-email {
+            margin-top: 20px;
+            width: 400px;
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: lightgray;
+        }
+
+        /* NIM */
+        .NIM {
+            margin-top: 15px;
+            width: auto;
+            height: 125px;
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px 15px 10px 20px;
+        }
+
+        .form-NIM {
+            margin-top: 20px;
+            width: 400px;
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: lightgray;
+        }
+
+        /* KELAS */
+        .kelas {
+            margin-top: 15px;
+            width: auto;
+            height: 125px;
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px 15px 10px 20px;
+        }
+
+        .form-kelas {
+            margin-top: 5px;
+            width: 150px;
+            height: 50px;
+            border-color: lightgray;
+        }
+
+
+        /* Absen */
+        .absen {
+            margin-top: 15px;
+            width: auto;
+            height: 125px;
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px 15px 10px 20px;
+        }
+
+        .form-absen {
+            margin-top: 15px;
+        }
+
+        input[type='radio'] { 
+            transform: scale(1.45); 
+        }
+
+
+        /* sumbit button */
+        .submit-button {
+            margin-top: 15px;
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            border: 0;
+            background-color: blueviolet;
+            color: white;
+
+        }
+
+        /* next to submit */
+        .clear-form {
+            position: relative;
+            color: blueviolet;
+            display: inline;
+            left: 420px;
+        }
+
+        /* beneath submit */
+        .disclaimer {
+            font-size: 15px;
+            color: grey;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="top-header"></div>
+            <div class="header-header">
+                <h1 style="margin: 10px 0 5px 10px;">Daftar Hadir Kelas Praktikum</h1>
+            </div>
+            <!-- <img src="img_tugas/1.jpg" alt=""> -->
+            <hr>
+            <img src="../_test_img/iconmonstr-eye-off-lined-24.png" alt="" class="crossed-eye">
+            <p class="text-mini">helloworld@anything.com <label style="color: blue;">  Switch account</label></p>
+            <img src="" alt="">
+
+        </div>
+        <div class="nama">
+            <h1 class="header-form">Nama</h1>
+            <form action="">
+                <input type="text" name="nama" placeholder="Your answer" class="form-nama">
+        </div>
+
+        <div class="email">
+            <h1 class="header-form">Email</h1>
+            <input type="email" name="email" placeholder="Your email" class="form-email">
+        </div>
+
+        <div class="NIM">
+            <h1 class="header-form">NIM</h1>
+            <input type="text" name="NIM" placeholder="Your answer" class="form-NIM">
+        </div>
+
+        <div class="kelas">
+            <h1 class="header-form">Kelas</h1>
+            <select name="kelas" id="" class="form-kelas">
+                <option value="" disabled selected> Choose class</option>
+                <option value="PL2A1">PL2A1</option>
+                <option value="PL2A2">PL2A2</option>
+                <option value="PL2B1">PL2B1</option>
+                <option value="PL2B2">PL2B2</option>
+            </select>
+        </div>
+
+        <div class="absen">
+            <h1 class="header-form">Kehadiran</h1>
+            <input type="radio" name="absen" value="Hadir" class="form-absen"> Hadir
+            <br>
+            <input type="radio" name="absen" value="Tidak hadir" class="form-absen"> Tidak Hadir
+        </div>
+
+        <input type="submit" class="submit-button">
+
+        <p class="clear-form">Clear form</p>
+
+        <p class="disclaimer">Never submit passwords through google forms</p>
+    </form>
+
+    </div>    
+</body>
+</html>

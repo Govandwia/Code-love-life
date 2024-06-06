@@ -1,0 +1,137 @@
+html,body {
+    height: 100%;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: seagreen;
+    color: #666;
+}
+
+h1 {
+    color: white;
+}
+
+nav {
+    background-color: darkgreen;
+    pad: 2rem 0;
+    max-width: 1100px;
+    margin : 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu > li, .menu > a {
+    display: inline-block;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px 1.5rem;
+}
+
+.menu li {
+    position: relative;
+}
+
+/* dropdown */
+.submenu {
+    position: absolute;
+    background-color: darkorchid;
+    left: 0;
+    height: 165px;
+    width: 140px;
+    display: none;
+}
+
+/* second dropright */
+.submenu2 {
+    height: 165px;
+    background-color: orange;
+    position: absolute;
+    left: 100%;
+    top: -64%;
+    display: none;
+    justify-content: center;
+}
+
+
+/* hover hover an */
+.menu a:hover {
+    background-color: darkorchid;
+    color: #fff;
+}
+
+.submenu a:hover {
+    background-color: darkmagenta;
+}
+
+.submenu .submenu2 a:hover {
+    background-color: darkgoldenrod;
+}
+
+/* show submenu on hover */
+.menu li:hover > .submenu {
+    display: block;
+    animation: slidedown .5s ease;
+    -webkit-animation: slidedown .5s ease;
+}
+
+.menu li:hover > .submenu2 {
+    display: block;
+    animation: slideright .5s ease;
+    -webkit-animation: slideright .5s ease;
+}
+
+
+@keyframes slidedown {
+    0% {
+        opacity: 0;
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -o-transform: translateY(-5px);
+}
+    100% {
+        opacity: 1;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+}
+}
+
+@keyframes slideright {
+    0% {
+        opacity: 0;
+        transform: translateX(-5px);
+        -webkit-transform: translateX(-5px);
+        -moz-transform: translateX(-5px);
+        -ms-transform: translateX(-5px);
+        -o-transform: translateX(-5px);
+}
+    100% {
+        opacity: 1;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+}
+}

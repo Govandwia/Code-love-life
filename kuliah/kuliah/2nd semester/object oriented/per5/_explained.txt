@@ -1,0 +1,164 @@
+////////////////////////////////////////////
+Constructor dalam pemrograman berorientasi objek (OOP) Java adalah metode khusus yang digunakan untuk menginisialisasi objek yang baru dibuat. Constructor memiliki nama yang sama dengan nama kelasnya dan tidak memiliki nilai kembalian. Tujuan utamanya adalah untuk memberikan nilai awal ke variabel instance (variabel yang melekat pada objek).
+
+Beberapa poin penting tentang constructor dalam Java:
+
+1.Nama Sama dengan Kelas: Constructor memiliki nama yang sama dengan nama kelasnya. Ini memungkinkan Java untuk mengidentifikasi bahwa metode tersebut adalah constructor dan bukan metode biasa.
+
+2.Tidak Ada Nilai Kembalian: Constructor tidak memiliki tipe kembalian. Ini berbeda dari metode lain yang dapat mengembalikan nilai.
+
+3.Digunakan untuk Inisialisasi: Constructor digunakan untuk memberikan nilai awal ke variabel instance objek. Saat objek dibuat, constructor dipanggil secara otomatis.
+
+4.Dapat Memiliki Parameter: Constructor dapat memiliki parameter seperti metode biasa. Parameter ini memungkinkan kita untuk menginisialisasi objek dengan nilai yang diberikan.
+
+Contoh sederhana constructor dalam Java:
+//
+public class Mobil {
+    // Variabel instance
+    String merek;
+    String warna;
+    int tahunProduksi;
+
+    // Constructor tanpa parameter
+    public Mobil() {
+        merek = "Toyota";
+        warna = "Hitam";
+        tahunProduksi = 2020;
+    }
+
+    // Constructor dengan parameter
+    public Mobil(String merek, String warna, int tahunProduksi) {
+        this.merek = merek;
+        this.warna = warna;
+        this.tahunProduksi = tahunProduksi;
+    }
+
+    public static void main(String[] args) {
+        // Membuat objek menggunakan constructor tanpa parameter
+        Mobil mobil1 = new Mobil();
+        System.out.println("Merek: " + mobil1.merek); // Output: Toyota
+        System.out.println("Warna: " + mobil1.warna); // Output: Hitam
+        System.out.println("Tahun Produksi: " + mobil1.tahunProduksi); // Output: 2020
+
+        // Membuat objek menggunakan constructor dengan parameter
+        Mobil mobil2 = new Mobil("Honda", "Merah", 2019);
+        System.out.println("Merek: " + mobil2.merek); // Output: Honda
+        System.out.println("Warna: " + mobil2.warna); // Output: Merah
+        System.out.println("Tahun Produksi: " + mobil2.tahunProduksi); // Output: 2019
+    }
+}
+//
+Dalam contoh di atas, Mobil adalah nama kelas, dan kita memiliki dua constructor. 
+Constructor pertama (public Mobil()) tanpa parameter, sementara yang kedua (public Mobil(String merek, String warna, int tahunProduksi)) 
+memiliki parameter. Saat objek Mobil dibuat, constructor dipanggil dan nilai-nilai default atau yang diberikan oleh parameter diset untuk variabel instance merek, 
+warna, dan tahunProduksi.
+
+/////////////////////////////
+Dalam pemrograman berorientasi objek (OOP) Java, "instance" mengacu pada salinan konkret dari sebuah kelas yang dibuat saat program berjalan. Ketika Anda membuat objek dari sebuah kelas, Anda membuat sebuah instance dari kelas tersebut.
+
+Berikut beberapa poin penting tentang instance dalam Java:
+
+1.Objek yang Dibuat dari Kelas: Saat Anda membuat objek dari sebuah kelas dengan menggunakan kata kunci new, Anda membuat sebuah instance dari kelas tersebut. Setiap objek yang dibuat dari kelas yang sama adalah instance yang berbeda.
+
+2.Mengakses Variabel dan Metode: Setiap instance memiliki salinan variabel-variabel (biasanya disebut sebagai variabel instance) dan metode-metode dari kelasnya. Anda dapat mengakses dan memanipulasi variabel instance serta memanggil metode pada setiap instance.
+
+3.Berbagi Struktur yang Sama: Meskipun setiap instance memiliki nilai yang berbeda untuk variabel instance-nya, mereka berbagi struktur dan perilaku yang sama yang ditentukan oleh kelas mereka. Ini berarti metode-metode yang didefinisikan dalam kelas akan memiliki perilaku yang sama di semua instance, meskipun nilai-nilai variabel instance-nya mungkin berbeda.
+
+Contoh sederhana penggunaan instance dalam Java:
+public class Mobil {
+    // Variabel instance
+    String merek;
+    String warna;
+    int tahunProduksi;
+
+    // Constructor
+    public Mobil(String merek, String warna, int tahunProduksi) {
+        this.merek = merek;
+        this.warna = warna;
+        this.tahunProduksi = tahunProduksi;
+    }
+
+    // Metode untuk menampilkan informasi mobil
+    public void displayInfo() {
+        System.out.println("Merek: " + merek);
+        System.out.println("Warna: " + warna);
+        System.out.println("Tahun Produksi: " + tahunProduksi);
+    }
+
+    public static void main(String[] args) {
+        // Membuat dua instance dari kelas Mobil
+        Mobil mobil1 = new Mobil("Toyota", "Hitam", 2020);
+        Mobil mobil2 = new Mobil("Honda", "Merah", 2019);
+
+        // Memanggil metode displayInfo() pada masing-masing instance
+        System.out.println("Info Mobil 1:");
+        mobil1.displayInfo();
+
+        System.out.println("\nInfo Mobil 2:");
+        mobil2.displayInfo();
+    }
+}
+
+
+Dalam pemrograman berorientasi objek (OOP) Java, "instance" mengacu pada salinan konkret dari sebuah kelas yang dibuat saat program berjalan. Ketika Anda membuat objek dari sebuah kelas, Anda membuat sebuah instance dari kelas tersebut.
+
+Berikut beberapa poin penting tentang instance dalam Java:
+
+Objek yang Dibuat dari Kelas: Saat Anda membuat objek dari sebuah kelas dengan menggunakan kata kunci new, Anda membuat sebuah instance dari kelas tersebut. Setiap objek yang dibuat dari kelas yang sama adalah instance yang berbeda.
+
+Mengakses Variabel dan Metode: Setiap instance memiliki salinan variabel-variabel (biasanya disebut sebagai variabel instance) dan metode-metode dari kelasnya. Anda dapat mengakses dan memanipulasi variabel instance serta memanggil metode pada setiap instance.
+
+Berbagi Struktur yang Sama: Meskipun setiap instance memiliki nilai yang berbeda untuk variabel instance-nya, mereka berbagi struktur dan perilaku yang sama yang ditentukan oleh kelas mereka. Ini berarti metode-metode yang didefinisikan dalam kelas akan memiliki perilaku yang sama di semua instance, meskipun nilai-nilai variabel instance-nya mungkin berbeda.
+
+Contoh sederhana penggunaan instance dalam Java:
+
+java
+Copy code
+public class Mobil {
+    // Variabel instance
+    String merek;
+    String warna;
+    int tahunProduksi;
+
+    // Constructor
+    public Mobil(String merek, String warna, int tahunProduksi) {
+        this.merek = merek;
+        this.warna = warna;
+        this.tahunProduksi = tahunProduksi;
+    }
+
+    // Metode untuk menampilkan informasi mobil
+    public void displayInfo() {
+        System.out.println("Merek: " + merek);
+        System.out.println("Warna: " + warna);
+        System.out.println("Tahun Produksi: " + tahunProduksi);
+    }
+
+    public static void main(String[] args) {
+        // Membuat dua instance dari kelas Mobil
+        Mobil mobil1 = new Mobil("Toyota", "Hitam", 2020);
+        Mobil mobil2 = new Mobil("Honda", "Merah", 2019);
+
+        // Memanggil metode displayInfo() pada masing-masing instance
+        System.out.println("Info Mobil 1:");
+        mobil1.displayInfo();
+
+        System.out.println("\nInfo Mobil 2:");
+        mobil2.displayInfo();
+    }
+}
+Dalam contoh di atas, mobil1 dan mobil2 adalah dua instance dari kelas Mobil. Masing-masing memiliki variabel instance merek, warna, 
+dan tahunProduksi, yang memiliki nilai yang berbeda di setiap instance. 
+Meskipun memiliki struktur yang sama, mereka adalah dua objek yang berbeda dan dapat dimanipulasi secara independen.
+
+///////////////////////////////////////
+MODIFIER => adalah hak ases suatu 
+modifier            class       package         subclass       world
+- public            O               o               o              0
+- non modifier
+- protected
+- private
+
+
+////////////////////////////////////
+enkasulapsi

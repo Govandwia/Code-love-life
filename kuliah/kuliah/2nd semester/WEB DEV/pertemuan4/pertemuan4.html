@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Belajar PW</title>
+    </head>
+    <!-- apapun yang ada di proyektor dah intinya -->
+    <body>
+        <form method="post" action="server.html" enctype="multipart/form-data">
+            <label for="namadepan" >nama depan : </label>
+            <input type="text" name="namadepan" placeholder="ketikkan nama depan" >
+            <br>
+            <label for="namabelakang">nama belakang : </label>
+            <input type="text" name="namabelakang" required value="ddd">
+            <br>
+            <label for="password"> password : </label>
+            <input type="password" name="password">
+            <br>
+            <label for="">readonly</label>
+            <input type="text" name="test" readonly>
+            <br>
+            <label for="">disabled</label>
+            <input type="text" name="testdis" disabled>
+            <br>
+            <label for="">contoh value di type text</label>
+            <input type="text" name="contohinput" value="joe mom">
+            <br>
+
+            <label for="">Hobi</label>
+            <input type="checkbox" name="hobii" value="makan">makan
+            <input type="checkbox" name="hobi" value="minum">minum
+            <input type="checkbox" name="hobi" value="tidur" checked>tidur
+
+            <br>
+            <label for="">jenis kelamin</label>
+            <input type="radio" name="gender" value="pria">Pria
+            <input type="radio" name="gender" value="wanita" checked>Wanita
+
+            <br>
+            <select name="mobil" id="">
+                <option value="" disabled selected></option>
+                <option value="volvo" >volvo</option>
+                <option value="merci">merci</option>
+                <option value="peugeot">peugeot</option>
+                <option value="BMW">BMW</option>
+            </select>
+            <br>
+
+            <label for="">Upload dokumen :</label>
+            <input type="file" name="foto" required>
+
+            <br>
+            <button type="submit">submit</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+.header {
+    background-color: aquamarine;
+    margin: 0 10px 10px 10px;
+}
+
+.navigation {
+    background-color: aquamarine;
+    margin: 10px 10px 10px 10px;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: aquamarine;
+    margin: 10px;
+}
+
+.content {
+    width: 75%;
+    background-color: aquamarine;
+    margin: 10px;
+}
+
+.footer {
+    background-color: aquamarine;
+    margin: 10px;
+}

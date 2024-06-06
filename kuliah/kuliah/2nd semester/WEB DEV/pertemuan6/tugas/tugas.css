@@ -1,0 +1,223 @@
+
+/* ## Colors
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%) */
+
+body {
+    font-size: 12px;
+    background-color: hsl(210, 46%, 95%);
+}
+
+
+.manrope {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: 12px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+.header1 {
+    font-weight: 500, 700;
+    font-family: manrope;
+    color: hsl(217, 19%, 35%);
+}
+
+/* behind the container */
+.bg {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(210, 46%, 95%);
+    /* border: 1px solid black; */
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* container */
+.container {
+    width: 750px;
+    border-radius: 10px;
+    background-color: white;
+    /* border: 1px solid red; */
+    height: auto ;
+    margin: 200px auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap flex;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* image */
+.img-container {
+    /* border: 1px solid green; */
+    width: 400px;
+    height: 310px;
+    background-image: url('article-preview-component-master/images/drawers.jpg');
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+    -ms-border-radius: 10px 0 0 10px;
+    -o-border-radius: 10px 0 0 10px;
+}
+
+.img-drawer {
+    width: fit-content;
+    height: fit-content;
+}
+
+/* beside the image */
+.info{
+    width: 600px;
+    /* margin: 10px; */
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 5px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.info .header1 {
+    width: 410px;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+}
+.info p {
+    width: 410px;
+    flex-wrap: wrap;
+    color: hsl(212, 23%, 69%);
+    font-family: manrope;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+}
+
+
+/* profile n else */
+.profile {
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid orange; */
+    margin-left: 15px;
+    margin-top: 10px;
+    width: 400px;
+    height: 60px;
+}
+
+.name-n-date {
+    width: 200px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0 15px;
+}
+
+.img-profile {
+    /* margin-right: 0; */
+    width: 50px;
+    /* border: 1px solid purple; */
+}
+
+.img-profile img{
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    width: 100%;
+}
+
+
+/* share-icon */
+.icon {
+    /* border: 1px solid green; */
+    padding: 7px;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+
+.icon:hover {
+    background-color: hsl(214, 17%, 51%);
+}
+.icon:focus {
+    background-color: hsl(214, 17%, 51%);
+}
+
+
+
+@media all and (max-width : 540px) {
+    
+    .container {
+        width: 375px;
+        margin: 50% auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 0;
+    }
+
+    .img-container {
+        height: 280px;
+        width: 375px;
+        border-radius: 10px 10px 0 0;
+        -webkit-border-radius: 10px 10px 0 0;
+        -moz-border-radius: 10px 10px 0 0;
+        -ms-border-radius: 10px 10px 0 0;
+        -o-border-radius: 10px 10px 0 0;
+    }
+
+    .header1 {
+        width: 290px;
+        height: 50px;
+        flex-wrap: wrap;
+        display: flex;
+        z-index: 1;
+        font-size: 18px;
+        /* justify-content: center;
+        align-items: center; */
+        padding: 5px;
+    }
+
+    .info {
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        gap: 25px;
+    }
+
+    .info-p {
+        width: 270px;
+        height: 30px;
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .profile {
+        width: 290px;
+    }
+}

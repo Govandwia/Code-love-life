@@ -1,0 +1,51 @@
+.card {
+    position: relative;
+    border: red solid 1px;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+.container-gambar {
+    border-radius: 10px 10px 0 0;
+    background-color: red;
+    width: 93,5%;
+    height: 40%;
+    padding: 15px;
+}
+
+.gambar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 10px; */
+}
+.gambar > img {
+    width: 55%;
+}
+.container-info {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background-image: url("assets/ugm.png");
+    background-size: cover; */
+}
+
+.container-info .info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bg-ugm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.bg-ugm > img {
+    width: 70%;
+}
